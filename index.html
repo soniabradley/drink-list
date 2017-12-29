@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classic Cocktails</title>
+</head>
+<div id="drinkOptions"></div>
+<script text/javascript>
+var drinkList = [
+    'Daiquiri: $10',
+    'Dirty Martini: $13',
+    'Salty Dog: $12',
+    'Screw Driver: $10',
+    'Sex on the Beach: $13',
+    'Sidecar: $10',
+    'Manhattan: $12',
+    'Margarita: $14',
+    'Tom Collins: $12',
+    'Pina Colada: $14',   
+];
+
+// Javascript grabs the div with matching id (#drinkOptions)
+var drinkDiv = document.getElementById("drinkOptions");
+
+// For loop then loops through my total drink list
+for (i = 0; i < drinkList.length; i++) {
+    // This creates a new div for each drink
+    var newDrinkDiv = document.createElement("div");
+    // It then makes the contents of this new div the drink and price
+    newDrinkDiv.innerHTML = drinkList[i];
+    // It then adds this new div to the drinkList div.
+    drinkDiv.appendChild(newDrinkDiv)
+}
+
+</script>
+
+<body>
+    
+</body>
+</html>
