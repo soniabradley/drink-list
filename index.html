@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Classic Cocktails</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="reset.css"> 
+    <link rel="stylesheet" type="text/css" href="style.css"> 
 </head>
+<body>
 <div id="drinkOptions"></div>
 <script text/javascript>
 var drinkList = [
@@ -22,21 +28,23 @@ var drinkList = [
 ];
 
 // Javascript grabs the div with matching id (#drinkOptions)
-var drinkDiv = document.getElementById("drinkOptions");
-
-// For loop then loops through my total drink list
+// var drinkDiv = document.getElementById("drinkOptions");
+// jQuery_________________________
+var drinkDiv = $('#drinkOptions');
+// For loop then loops through my total drink list, stays the same with jQuery
 for (i = 0; i < drinkList.length; i++) {
     // This creates a new div for each drink
     var newDrinkDiv = document.createElement("div");
     // It then makes the contents of this new div the drink and price
     newDrinkDiv.innerHTML = drinkList[i];
+    // jQuery-----------------------------------------------
+    var newDrinkDiv = $('<div>' + drinkList[i] + '</div>'); 
     // It then adds this new div to the drinkList div.
-    drinkDiv.appendChild(newDrinkDiv)
+    // drinkDiv.appendChild(newDrinkDiv)
+    // jQuery -----------------
+    drinkDiv.append(newDrinkDiv)
 }
 
 </script>
-
-<body>
-    
 </body>
 </html>
