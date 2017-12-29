@@ -1,6 +1,8 @@
 # drink-list
 A jQuery assignment
 Convert Javascript into jQuery
+https://soniabradley.github.io/drink-list/
+
 1.  Create a div id = drinkOptions. selection 
 2.  Create a var = drinkList with an array of all of the drinks and their succeded prices.
 3.  Create another var = drinkDiv to get with the id="drinkOptions".
